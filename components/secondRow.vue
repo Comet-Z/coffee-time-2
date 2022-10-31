@@ -15,13 +15,13 @@
       xs:flex xs:flex-col xs:items-center xs:gap-10
     "
   >
-    <!-- ! flat white -->
-    <SecondRowFlatWhite />
-    <!-- ! irish -->
-    <SecondRowIrish />
-    <!-- ! macchiato -->
-    <SecondRowMacchiato />
-    <!-- ! bicerin -->
-    <SecondRowBicerin />
+    <!-- ! sheep -->
+    <SecondRowSheep />
+    <!-- ! baran -->
+    <SecondRowBaran />
+    <!-- ! bull -->
+    <SecondRowBull />
+    <!-- ! turkey -->
+    <SecondRowInduk />
   </div>
 </template>

@@ -22,16 +22,16 @@
             <Teleport to="#teleported">
               <CardModal :show="showCardModal" @close="showCardModal = false">
                 <template v-slot:modal-title>
-                  {{ coffee.doppio.coffeeTitle + " ☕" }}
+                  {{ coffee.doppio.coffeeTitle }}
                 </template>
                 <!-- ? ingredient list render -->
                 <template v-slot:modal-ingredients>
-                  <li
+                  <p
                     v-for="ingredient in coffeeIngredients.doppio"
                     :key="ingredient.id"
                   >
                     {{ ingredient }}
-                  </li>
+                  </p>
                 </template>
                 <!-- ? guide list render -->
                 <template v-slot:modal-steps-guide>
@@ -57,27 +57,18 @@
   let coffees = [
     {
       doppio: {
-        coffeeImg: "/img/doppio.jpg",
-        coffeeTitle: "Doppio",
+        coffeeImg: "/img/goat.jpg",
+        coffeeTitle: "Коза",
         coffeeDesc:
-          "Doppio espresso is a double shot which is extracted using double the amount of ground coffee in a larger-sized portafilter basket. ",
+          "Коза -  домашнее животное, вид парнокопытных из рода горные козлы (Capra) семейства полорогих. ",
       },
     },
   ];
   
   let coffeeIngredients = {
     doppio: [
-      "2 Shots espresso",
+      "Основная продукция, получаемая от коз — мясо, молоко, мех, шерсть и кожа. По направлению продуктивности породы коз делятся на типы: молочные, шёрстные, пуховые, молочно-мясо-шёрстные. Ангорская коза разводится для получения шерсти. Кашмирская коза и Оренбургская коза разводятся для пуха. В США некоторые хозяйства разводят обморочных коз. Удой обычно составляет 450—550 кг молока жирностью 3,8—4,5 % за лактацию. Настриг шерсти с козлов — 4—6 кг, с маток — 3—5 кг. Длина состригаемой шерсти составляет 15—18 см. Начёс пуха — 0,2—0,5 кг. Срок хозяйственного использования животного обычно достигает 7—8 лет. Из козьих шкур производят кожу высокой выделки — сафьян, шевро.",
     ],
   
-    doppioGuide: [
-      " You first need to grind your espresso to a consistency that is going to filter through your machine. This should be a fine grind that gives you a powdery result rather than a medium-course grind that is used for Aeropress, Chemex, or other types of coffee pots that require an over-the-top pout method. The use of water pressure is essential to create the best-tasting result by being forced out of your machine. ",
-
-      " Make two separate amounts that will fit into your portafilter and tamp the contents so they are lightly packed. The rest of the work comes from waiting for your espresso to be extracted. After this is complete you add a new batch of espresso into the portafilter and repeat the same extraction. ",
-
-      " If you have a hand pump espresso maker, you’ll need to use several repeated pumps to build up pressure. This not only allows the pressure to build while the espresso is filtering, but it adds a richer crema that gives espresso more character. This technique is what Érik Favre did who traveled through Italy to learn the secrets of what makes espresso taste superior. His hard work and attention to detail (with a little motivation from his Italian wife), led to the invention of the Nespresso machine. ",
-
-      " When you’re done you simply add sugar or milk to your doppio and then drink right away. ",
-    ],
   };
   </script>
