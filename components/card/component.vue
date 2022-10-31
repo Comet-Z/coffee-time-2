@@ -9,9 +9,10 @@
       ease-in
       w-72
       h-100
+      rounded-xl
       bg-white
       shadow-lg
-      dark:bg-[#080808] dark:text-white
+      dark:bg-[#1E1E1E] dark:text-gray-400
     "
   >
     <div>

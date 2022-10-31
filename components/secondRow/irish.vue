@@ -22,16 +22,16 @@
             <Teleport to="#teleported">
               <CardModal :show="showCardModal" @close="showCardModal = false">
                 <template v-slot:modal-title>
-                  {{ coffee.irish.coffeeTitle }}
+                  {{ coffee.irish.coffeeTitle + " ☕" }}
                 </template>
                 <!-- ? ingredient list render -->
                 <template v-slot:modal-ingredients>
-                  <p
+                  <li
                     v-for="ingredient in coffeeIngredients.irish"
                     :key="ingredient.id"
                   >
                     {{ ingredient }}
-                  </p>
+                  </li>
                 </template>
                 <!-- ? guide list render -->
                 <template v-slot:modal-steps-guide>
@@ -57,17 +57,34 @@
   let coffees = [
     {
       irish: {
-        coffeeImg: "/img/baran.jpg",
-        coffeeTitle: "Баран",
+        coffeeImg: "/img/irish.jpg",
+        coffeeTitle: "Irish",
         coffeeDesc:
-          "Бараны достигают длины от 1,4 до 1,8 м, хвост длиной от 7 до 15 см. Высота в плечах от 65 до 125 см, вес — от 20 до 200 кг, причём самцы всегда значительно массивнее самок.",
+          "Irish coffee is a caffeinated alcoholic drink consisting of Irish whiskey, hot coffee, and sugar, stirred, and topped with cream.",
       },
     },
   ];
   
   let coffeeIngredients = {
     irish: [
-      "Бараны ведут дневной образ жизни, однако в особо жаркие дни удаляются на отдых в тенистые места и переносят поиск пищи на вечернее или ночное время. Самки и молодняк образуют небольшие стада, которые иногда объединяются в более крупные. Самцы большинство времени живут отдельно от самок, ведя либо одиночный образ жизни, либо являясь частью исключительно мужской группы. Внутри такой группы существует строгая иерархия, устанавливаемая в зависимости от величины рогов либо в прямых поединках. Бараны — растительноядные животные и питаются главным образом травами. "
+      "2 Shots espresso",
+
+      "2 teaspoons packed brown sugar, to taste ",
+
+      "4 ounces strong, hot coffee ",
+
+      "11/2 ounces Irish whiskey",
+
+      "1 ounce heavy cream, lightly whipped",
+    ],
+  
+    irishGuide: [
+      "Gather the ingredients",
+      " Place the brown sugar into a warm Irish coffee glass, mug, or other heatproof glass. ",
+      " Add the coffee and Irish whiskey. ",
+      " Stir until the sugar is dissolved. ",
+      " Float the lightly whipped heavy cream on top by slowly pouring it over the back of a spoon. ",
+      " Do not stir. Instead, drink the Irish coffee through the cream. Enjoy. ",
     ],
   };
   </script>

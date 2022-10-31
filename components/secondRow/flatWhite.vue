@@ -22,16 +22,16 @@
             <Teleport to="#teleported">
               <CardModal :show="showCardModal" @close="showCardModal = false">
                 <template v-slot:modal-title>
-                  {{ coffee.flatWhite.coffeeTitle }}
+                  {{ coffee.flatWhite.coffeeTitle + " ☕" }}
                 </template>
                 <!-- ? ingredient list render -->
                 <template v-slot:modal-ingredients>
-                  <p
+                  <li
                     v-for="ingredient in coffeeIngredients.flatWhite"
                     :key="ingredient.id"
                   >
                     {{ ingredient }}
-                  </p>
+                  </li>
                 </template>
                 <!-- ? guide list render -->
                 <template v-slot:modal-steps-guide>
@@ -57,19 +57,32 @@
   let coffees = [
     {
       flatWhite: {
-        coffeeImg: "/img/sheep.jpg",
-        coffeeTitle: "Домашняя овца",
+        coffeeImg: "/img/flatwhite.jpg",
+        coffeeTitle: "Flat White",
         coffeeDesc:
-          "Парнокопытное млекопитающее из рода баранов, семейства полорогих. Это животное уже в глубокой древности было одомашнено человеком, в основном из-за густой шерсти и съедобного мяса.",
+          "A flat white is a double shot espresso-based coffee with steamed milk finished with a thin layer of textured microfoam on top—sort of a velvety consistency.",
       },
     },
   ];
   
   let coffeeIngredients = {
     flatWhite: [
-      "Размер и вес домашних овец сильно различается в зависимости от породы. Скорость роста и масса взрослого животного во многом зависят от наследственности, и по этой причине селекционный отбор часто производится на основании этих характеристик Взрослые самки обычно весят 45—100 кг, тогда как более крупные самцы 70—160 кг. Рекордный вес барана (саффолкской породы) достигал 247,2 кг. В целом высота в холке у животных составляет 55-100 см, а длина тела — 60—110 см. Мор  да в нижней части заострённая, имеет прямой или иногда горбоносый профиль, почти полностью (за исключением губ и краёв ноздрей) покрыта тонкой шерстью. "
+      "Espresso",
+      "Milk",
+      "Espresso machine",
+      "Grinder",
+      "Scale",
+      "Milk pitcher",
+      "Cloth for portafilter & steamwand ",
+      "Cup (drink volume: 150-240ml)"
     ],
   
-   
+    flatWhiteGuide: [
+      "Pull a double espresso into a cup or glass. Use double ristretto or double espresso. Often the drink has strong coffee taste. ",
+
+      "Steam the milk to 55–62 °C. Learn how the right temperature feels in your hand when holding the pitcher or use a thermometer to take the temperature of the milk. To make the milk velvety and smooth and disperse any bubbles, give the pitcher a thump on the counter and swirl the milk lightly around the pitcher. ",
+
+      "Make a latte art pattern on the surface of the flat white. Foam layer should be from 0.5-1.5 cm.",
+    ],
   };
   </script>

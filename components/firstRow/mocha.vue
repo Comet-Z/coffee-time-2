@@ -22,16 +22,16 @@
           <Teleport to="#teleported">
             <CardModal :show="showCardModal" @close="showCardModal = false">
               <template v-slot:modal-title>
-                {{ coffee.mocha.coffeeTitle }}
+                {{ coffee.mocha.coffeeTitle + " ☕" }}
               </template>
               <!-- ? ingredient list render -->
               <template v-slot:modal-ingredients>
-                <p
+                <li
                   v-for="ingredient in coffeeIngredients.mocha"
                   :key="ingredient.id"
                 >
                   {{ ingredient }}
-                </p>
+                </li>
               </template>
               <!-- ? guide list render -->
               <template v-slot:modal-steps-guide>
@@ -57,19 +57,33 @@ let showCardModal = ref(false);
 let coffees = [
   {
     mocha: {
-      coffeeImg: "/img/pig.jpg",
-      coffeeTitle: "Домашняя свинья",
+      coffeeImg: "/img/mocha.jpg",
+      coffeeTitle: "Mokko",
       coffeeDesc:
-        "Крупное парнокопытное, разновидность кабана, одомашненная человеком около 7000 лет назад и распространённая главным образом в странах Запада, в Восточной Азии и в Океании.  ",
+        " Chocolate-flavoured warm beverage that is a variant of a café latte commonly served in a glass rather than a mug. ",
     },
   },
 ];
 
 let coffeeIngredients = {
   mocha: [
-    "Свинина является одним из основных видов мяса во многих странах мира. На вид мясо свиньи имеет бледно-розовую окраску, содержит заметные прослойки жира. По вкусовым качествам свинина отличается бо́льшей мягкостью и жирностью в сравнении с говядиной и бараниной. В пищу обычно употребляется мясо самок свиньи, или (реже) боровов, кастрированных до начала полового созревания. Мясо хряков-производителей также годно в пищу, однако оно обладает существенно худшими вкусовыми качествами.",
-
+    "18g ground espresso, or 1 espresso pod.",
+    "250 ml of milk.",
+    "1 tsp drinking chocolate.",
+    "Large cup, 300 - 500ml capacity.",
+    "Whipped Cream. ",
   ],
 
+  mochaGuide: [
+    "Start by brewing your espresso coffee.",
+    "While the espresso is brewing, steam the milk.",
+    "You can steam the milk with a steaming wand or heat it on the stove. ",
+    "In a tall glass, add a tablespoon of the chocolate sauce. ",
+    "Pour the hot espresso on top.",
+    "Give the espresso and chocolate sauce a quick stir. ",
+    "Pour the steamed milk into the glass.",
+    "Top this off with a serving of whipped cream.",
+    "Finish the drink with a drizzle of chocolate sauce. ",
+  ],
 };
 </script>

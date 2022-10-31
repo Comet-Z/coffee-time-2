@@ -21,14 +21,14 @@
         xs:flex xs:flex-col xs:items-center xs:gap-10
       "
     >
-      <!-- ! cow -->
-      <FirstRowCow />
-      <!-- ! pig -->
-      <FirstRowPig/>
-      <!-- ! chicken -->
-      <FirstRowChicken />
-      <!-- ! goat -->
-      <FirstRowGoat />
+      <!-- ! americano -->
+      <FirstRowAmericano />
+      <!-- ! mocha -->
+      <FirstRowMocha/>
+      <!-- ! cappuccino -->
+      <FirstRowCappuccino />
+      <!-- ! doppio -->
+      <FirstRowDoppio />
     </div>
   </div>
 </template>

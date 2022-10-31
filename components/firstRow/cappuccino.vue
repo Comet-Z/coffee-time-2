@@ -22,16 +22,16 @@
             <Teleport to="#teleported">
               <CardModal :show="showCardModal" @close="showCardModal = false">
                 <template v-slot:modal-title>
-                  {{ coffee.cappuccino.coffeeTitle }}
+                  {{ coffee.cappuccino.coffeeTitle + " ☕" }}
                 </template>
                 <!-- ? ingredient list render -->
                 <template v-slot:modal-ingredients>
-                  <p
+                  <li
                     v-for="ingredient in coffeeIngredients.cappuccino"
                     :key="ingredient.id"
                   >
                     {{ ingredient }}
-                  </p>
+                  </li>
                 </template>
                 <!-- ? guide list render -->
                 <template v-slot:modal-steps-guide>
@@ -57,17 +57,34 @@
   let coffees = [
     {
       cappuccino: {
-        coffeeImg: "/img/chicken.jpg",
-        coffeeTitle: "Курица",
+        coffeeImg: "/img/cappuccino.webp",
+        coffeeTitle: "Cappuccino",
         coffeeDesc:
-          "Домашняя курица - самая многочисленная и распространённая домашняя птица, а в XXI веке — самый многочисленный на Земле вид птиц. ",
+          " An espresso-based coffee drink that originated in Austria with later development taking place in Italy, and is prepared with steamed milk foam. ",
       },
     },
   ];
   
   let coffeeIngredients = {
     cappuccino: [
-      "В домашних хозяйствах основным кормом курам служат разные виды зерновых, из которых овёс, ячмень, гречиха и просо наиболее употребительны. Ими можно кормить кур в течение целого года без вреда для их здоровья и продуктивности. Часто куры роют землю в поисках крупных насекомых, личинок и семян. Прибавка к зерновому корму в небольшом количестве зелени и животной пищи (в прошлом, например, конины, сушёных майских жуков), когда птицы не выгуливаются и не могут отыскивать червей и клевать травы самостоятельно, полезна: она увеличивает яйценоскость."
+      "2 tablespoons finely ground dark roast coffee",
+      "4 ounces water ",
+      "4 ounces of milk",
+    ],
+  
+    cappuccinoGuide: [
+      "Pull a double shot of Espresso",
+      "Put the water into the boiler of your espresso machine",
+      "Tamp (press) the coffee down using a tamper. Do this 2 to 3 times to make sure the grounds are packed tightly.",
+      "Place the portafilter into your espresso machine's group head and lock it in place by turning it to the right.",
+
+      "Place a demitasse cup or the glass carafe that came with your espresso machine under the group head and pull the shot for 23 to 30 seconds, or until 2 ounces of espresso is yielded. Typically, there is a lever, switch, or button to start this process.",
+
+      "Once the shot is pulled, foam the milk.",
+
+      "Pour the steamed milk into the glass.",
+      "Top this off with a serving of whipped cream.",
+      "Finish the drink with a drizzle of chocolate sauce. ",
     ],
   };
   </script>
